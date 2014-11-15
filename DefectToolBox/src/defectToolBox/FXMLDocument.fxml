@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="defectanalysis.FXMLDocumentController">
+    <children>
+        <TabPane prefHeight="480.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="Defect Count">
+                    <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <VBox layoutX="79.0" layoutY="47.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <ToolBar prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                            <items>
+                                                <RadioButton fx:id="checkLegacyDTS" mnemonicParsing="false" onMouseClicked="#changeToLegacyDefectCount" text="invivoDTS" />
+                                                <RadioButton fx:id="checkJIRA" mnemonicParsing="false" onMouseClicked="#changeToJIRADefectCount" text="ECOA-" />
+                                                <RadioButton fx:id="checkOther" mnemonicParsing="false" onMouseClicked="#changeToOtherDefectCount" text="Other" />
+                                                <TextField fx:id="txtPrefix" onTextChange="#txtPrefixOnRelease" promptText="Enter the prefix" />
+                                                <Separator orientation="VERTICAL" />
+                                                <Button fx:id="buttonCheck" mnemonicParsing="false" onAction="#buttonCheckClicked" text="CHECK" />
+                                                <Separator orientation="VERTICAL" />
+                                                <TextField fx:id="txtMax" prefHeight="25.0" prefWidth="275.0" promptText="Enter Max value (ex: 99999 or ECOA-999)" />
+                                            </items>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </ToolBar>
+                                        <HBox maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                                            <children>
+                                                <VBox HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <Label fx:id="labelInputLeft" maxHeight="1.7976931348623157E308" text="Paste your first Defects List here ...." />
+                                                        <TextArea fx:id="textInputLeft" maxHeight="1.7976931348623157E308" wrapText="true" VBox.vgrow="ALWAYS" />
+                                                    </children>
+                                                </VBox>
+                                                <VBox maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <Label fx:id="labelInputRight" alignment="CENTER_RIGHT" text="Paste your second Defects List here ...." textAlignment="RIGHT" />
+                                                        <TextArea fx:id="textInputRight" wrapText="true" VBox.vgrow="ALWAYS" />
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="SOMETIMES">
+                                            <children>
+                                                <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <TextArea fx:id="textOutputLeft" maxHeight="1.7976931348623157E308" prefHeight="250.0" wrapText="true" />
+                                                        <Label fx:id="labelOutputLeft" text="Defect that are not in Left List" />
+                                                    </children>
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                </VBox>
+                                                <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <TextArea fx:id="textOutputCenter" maxHeight="1.7976931348623157E308" prefHeight="250.0" wrapText="true" />
+                                                        <Label fx:id="labelOutputCenter" text="Defect covered in both list" />
+                                                    </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                    <children>
+                                                        <TextArea fx:id="textOutputRight" maxHeight="1.7976931348623157E308" prefHeight="250.0" wrapText="true" />
+                                                        <Label fx:id="labelOutputRight" text="Defect that are not in Right List" />
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
