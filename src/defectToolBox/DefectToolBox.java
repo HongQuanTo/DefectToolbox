@@ -16,7 +16,7 @@ import javafx.stage.Stage;
  *
  * @author quan
  */
-public class DefectAnalysis extends Application {
+public class DefectToolBox extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
