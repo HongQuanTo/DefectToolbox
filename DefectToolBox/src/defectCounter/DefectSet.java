@@ -77,7 +77,7 @@ public class DefectSet {
                 if (!word.isEmpty()) {
 
                     if (word.length() > prefix.length()
-                            && word.compareTo(prefix) > 0 && word.compareTo(max) <= 0) {
+                            && word.compareTo(prefix) >= 0 && padding(word, max.length()).compareTo(max) <= 0) {
                         // possible this an ECOA- or prefixed defects
                         defectSet.add(word);
                     }
@@ -147,5 +147,13 @@ public class DefectSet {
      */
     public Integer size() {
         return defectSet.size();
+    }
+    public String padding (String input, Integer size) {
+        String result="";
+        result = input; 
+        for (int i =result.length(); i<size; i++){
+            result = result +"!";
+        }
+        return result;
     }
 }
