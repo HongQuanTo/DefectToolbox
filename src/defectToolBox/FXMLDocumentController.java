@@ -104,7 +104,7 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @FXML
-    private void changeToLegacyDefectCount() {
+    private void changeToLegacyDefectCount(Event event) {
         checkLegacyDTS.setSelected(true);
         checkJIRA.setSelected(false);
         checkOther.setSelected(false);
@@ -116,7 +116,7 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @FXML
-    private void changeToJIRADefectCount() {
+    private void changeToJIRADefectCount(Event event) {
         checkLegacyDTS.setSelected(false);
         checkJIRA.setSelected(true);
         checkOther.setSelected(false);
@@ -126,7 +126,7 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @FXML
-    private void changeToOtherDefectCount() {
+    private void changeToOtherDefectCount(Event event) {
         checkLegacyDTS.setSelected(false);
         checkJIRA.setSelected(false);
         checkOther.setSelected(true);
@@ -138,7 +138,7 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @FXML
-    private void txtPrefixOnRelease() {
+    private void textPrefixOnRelease(Event event) {
         textMax.setText(textPrefix.getText() + "99999");
     }
 }
