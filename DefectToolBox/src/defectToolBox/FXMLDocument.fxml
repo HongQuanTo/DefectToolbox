@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="defectanalysis.FXMLDocumentController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="defectToolBox.FXMLDocumentController">
     <children>
         <TabPane prefHeight="480.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <tabs>
@@ -20,11 +20,11 @@
                                                 <RadioButton fx:id="checkLegacyDTS" mnemonicParsing="false" onMouseClicked="#changeToLegacyDefectCount" text="invivoDTS" />
                                                 <RadioButton fx:id="checkJIRA" mnemonicParsing="false" onMouseClicked="#changeToJIRADefectCount" text="ECOA-" />
                                                 <RadioButton fx:id="checkOther" mnemonicParsing="false" onMouseClicked="#changeToOtherDefectCount" text="Other" />
-                                                <TextField fx:id="txtPrefix" onTextChange="#txtPrefixOnRelease" promptText="Enter the prefix" />
+                                                <TextField fx:id="textPrefix" onTextChange="#textPrefixOnRelease" promptText="Enter the prefix" />
                                                 <Separator orientation="VERTICAL" />
                                                 <Button fx:id="buttonCheck" mnemonicParsing="false" onAction="#buttonCheckClicked" text="CHECK" />
                                                 <Separator orientation="VERTICAL" />
-                                                <TextField fx:id="txtMax" prefHeight="25.0" prefWidth="275.0" promptText="Enter Max value (ex: 99999 or ECOA-999)" />
+                                                <TextField fx:id="textMax" prefHeight="25.0" prefWidth="275.0" promptText="Enter Max value (ex: 99999 or ECOA-999)" />
                                             </items>
                                             <VBox.margin>
                                                 <Insets />
