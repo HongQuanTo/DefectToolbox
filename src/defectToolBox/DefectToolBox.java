@@ -10,6 +10,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -17,12 +18,13 @@ import javafx.stage.Stage;
  * @author quan
  */
 public class DefectToolBox extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));        
-        stage.setTitle("Defect Tool Box for ERT Team by Quan To");
-        Scene scene = new Scene(root);   
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        stage.setTitle("ID Toolbox");
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/defectToolBox/img/favicon.png")));
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
@@ -33,5 +35,5 @@ public class DefectToolBox extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }
